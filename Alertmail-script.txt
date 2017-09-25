@@ -1,0 +1,27 @@
+function onFormSubmit(){
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var fr1 = ss.getSheetByName("Form responses 1");
+  var urlOfSS = ss.getUrl("https://docs.google.com/spreadsheets/d/1SfFVIsrrDlbBTHHjWlYg8PqesygtK8v1cCVgLEn5tfo/edit#gid=0");
+  var message = "Hello. There's a new request for a private class. CLick on the link below to see the details." + "\n" + urlOfSS;
+  var emails = ss.getSheetByName("test");
+  var numRows = test.getLastRow();
+  var emailTo = test.getRange(2, 2, numRows, 1).getValues();
+  var subject = "Private Class Request";
+  GmailApp.sendEmail('prakashshekar90@gmail.com', subject, message);
+}
+
+
+
+
+
+NOTE:
+
+  1. ss.getUrl(" copy and paste the url of the spreadsheet");
+  2. test.getLastRow()     --> here test is the sheet name / if you create another sheet you must replace the test to new sheet name
+
+
+Trigger to make a alert:
+	
+  1. click the clock icon on the script editor
+  2. create a new trigger with that form name i.e : onFormSubmit  , Spreadsheet , on submit  
+  3. you can make the alert by immediate / daily /hourly it's our wish to make that
