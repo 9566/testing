@@ -11,3 +11,6 @@ Sudo yum clean all
 	> sudo systemctl stop httpd
 	> sudo systemctl restart httpd
 
+What is the changes made here?
+why we are using the github?
+check the Docs.
