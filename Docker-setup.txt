@@ -1,0 +1,21 @@
+Docker installation:
+
+sudo yum update -y
+sudo yum install -y docker
+sudo service docker start
+sudo usermod -a -G docker ec2-user
+docker info
+
+
+Docker script to launch docker containers and such
+
+sudo yum update
+curl -sSL https://get.docker.com/ | sh
+sudo service docker start
+sudo docker run hello-world
+echo "you should see hello" if this worked
+pause
+sudo usermod -aG docker ec2-user
+pause
+echo "you now need to restart"
+sudo reboot 
