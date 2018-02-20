@@ -1,0 +1,15 @@
+git checkout .       → will replace everything in the working directory to the last committed version.
+
+git reset HEAD .  → will move files back from the staging area to the working directory
+
+git reset --hard HEAD   → allows you to go back to any commit state. Remember, HEAD is an alias for the last commit-hash of the branch.
+
+git revert      → allows you to undo the commits.
+
+git revert HEAD --no-edit
+
+git revert HEAD...HEAD~2   → to revert the commits between HEAD and HEAD~2.
+
+git log --oneline      → for a quick overview of the commit history.
+
+
